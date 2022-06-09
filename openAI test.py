@@ -123,7 +123,7 @@ def speak(prompt = None):
     
     f.close()
 
-    openai.api_key = "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"
+    openai.api_key = 
     
     new_prompt = lines + "\n\n Human: \n\n{}\n\nme: ".format(prompt)
 
@@ -167,7 +167,7 @@ def dream():
     
     f.close()
 
-    openai.api_key = "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"
+    openai.api_key = 
     
     new_prompt = "Summarize the following in your own words:\n\n \"{}\" ".format(memories)
 
