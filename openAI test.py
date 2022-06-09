@@ -39,7 +39,7 @@ def main():
     counter = 0
 
     global APIKEY
-    APIKEY = "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"
+    APIKEY = ""
 
     root = tk.Tk()
     root.geometry('400x500')
