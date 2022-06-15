@@ -39,7 +39,7 @@ def main():
     counter = 0
 
     global APIKEY
-    APIKEY = ""
+    APIKEY = os.getenv('OPENKEY')
 
     root = tk.Tk()
     root.geometry('400x500')
@@ -116,6 +116,7 @@ def main():
 def speak(prompt = None):
     global counter
     global memory
+    global APIKEY
 
     f = open(memory, 'r')
     
@@ -123,7 +124,7 @@ def speak(prompt = None):
     
     f.close()
 
-    openai.api_key = 
+    openai.api_key = APIKEY
     
     new_prompt = lines + "\n\n Human: \n\n{}\n\nme: ".format(prompt)
 
@@ -159,6 +160,7 @@ def speak(prompt = None):
 def dream():
 
     global memory
+    global APIKEY
     
     f = open(memory, 'r')
     
@@ -167,7 +169,7 @@ def dream():
     
     f.close()
 
-    openai.api_key = 
+    openai.api_key = APIKEY
     
     new_prompt = "Summarize the following in your own words:\n\n \"{}\" ".format(memories)
 
